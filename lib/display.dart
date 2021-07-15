@@ -8,7 +8,7 @@ class Display extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: EdgeInsets.all(30),
-      child :Text( s ,style: TextStyle(fontSize: 18),
+      child :Text( s ,style: TextStyle(fontSize: 18, color: Colors.orange),
       textAlign: TextAlign.center,)
     );
   }

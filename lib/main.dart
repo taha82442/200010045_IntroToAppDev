@@ -98,7 +98,7 @@ class Mycalstate extends State<MyCalculator> {
   }
 
   void Pro() {
-    pro = '*';
+    pro = 'x';
     setState(() {
       ons = ons + pro;
     });
@@ -132,7 +132,7 @@ class Mycalstate extends State<MyCalculator> {
           ans = num1 + num2;
           ons = ans.toString();
         });
-      } else if (s[i] == '*') {
+      } else if (s[i] == 'x') {
         num1 = double.parse(s.substring(0, i));
         num2 = double.parse(s.substring(i + 1, s.length));
 
@@ -175,13 +175,18 @@ class Mycalstate extends State<MyCalculator> {
 
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(
+            appBarTheme: AppBarTheme(
+              color: Color(0xFF151026),
+            )),
         home: Scaffold(
       appBar: AppBar(
-        title: Text('My Calculator App'),
+        title: Text('My Calculator App', style: TextStyle(color: Colors.orange),),
+
       ),
       body:Container(
-        margin: EdgeInsets.all(2),
-        
+
+        color: Colors.black,
         child :Column(mainAxisAlignment: MainAxisAlignment.center,
               children: [
         Display(ons),
@@ -189,109 +194,109 @@ class Mycalstate extends State<MyCalculator> {
               RaisedButton(
                 padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('0', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('0', style: TextStyle(color: Colors.orange)),
               onPressed: f0),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('1', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('1', style: TextStyle(color: Colors.orange)),
               onPressed: f1),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('2', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('2', style: TextStyle(color: Colors.orange)),
               onPressed: f2),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('3', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('3', style: TextStyle(color: Colors.orange)),
               onPressed: f3),
         ]),
         Row(mainAxisAlignment: MainAxisAlignment.center,children: [
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('4', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('4', style: TextStyle(color: Colors.orange)),
               onPressed: f4),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('5', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('5', style: TextStyle(color: Colors.orange)),
               onPressed: f5),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('6', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('6', style: TextStyle(color: Colors.orange)),
               onPressed: f6),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('*', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('x', style: TextStyle(color: Colors.orange)),
               onPressed: Pro),
         ]),
         Row(mainAxisAlignment: MainAxisAlignment.center,children: [
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('7', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('7', style: TextStyle(color: Colors.orange)),
               onPressed: f7),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('8', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('8', style: TextStyle(color: Colors.orange)),
               onPressed: f8),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('9', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('9', style: TextStyle(color: Colors.orange)),
               onPressed: f9),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal:20 , vertical:60),
 
-              color: Colors.blue,
-              child: Text('+', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('+', style: TextStyle(color: Colors.orange)),
               onPressed: Add),
         ]),
         Row(mainAxisAlignment: MainAxisAlignment.center,children: [
           RaisedButton(padding: EdgeInsets.symmetric(horizontal:20 , vertical:30),
 
 
-              color: Colors.blue,
-              child: Text('.', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('.', style: TextStyle(color: Colors.orange)),
               onPressed: dot),
           RaisedButton(padding: EdgeInsets.symmetric(horizontal:20 , vertical:30),
 
 
-              color: Colors.blue,
-              child: Text('/', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('/', style: TextStyle(color: Colors.orange)),
               onPressed: Divide),
           RaisedButton(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
-              color: Colors.blue,
-              child: Text('-', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('-', style: TextStyle(color: Colors.orange)),
               onPressed: Subtract),
 
           RaisedButton(padding: EdgeInsets.symmetric(horizontal:20 , vertical:30),
 
-              color: Colors.blue,
-              child: Text('Clear', style: TextStyle(color: Colors.white)),
+              color: Colors.black,
+              child: Text('Clear', style: TextStyle(color: Colors.orange)),
               onPressed: clear),
         ]),
-          RaisedButton(padding: EdgeInsets.symmetric(horizontal:150 , vertical:5),
+          RaisedButton(padding: EdgeInsets.symmetric(horizontal:175 , vertical:5),
 
-            color: Colors.blue,
-            child: Text('=', style: TextStyle(color: Colors.white)),
+            color: Colors.black,
+            child: Text('=', style: TextStyle(color: Colors.orange, fontSize: 28)),
             onPressed: Result),
       ]),
       ),));
